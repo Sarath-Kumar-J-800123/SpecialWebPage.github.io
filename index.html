@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Login</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="Styles.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+<div class="container">
+	<div class="card">
+		<form>
+			<div class="form-group">
+				<label>Enter Your Email_Id:</label>
+				<input type="email" class="form-control" id="email" name="email">
+			</div>
+			<div class="form-group">
+				<label>Enter Your Date Of Birth:</label>
+				<input type="date" class="form-control" id="date" name="date">
+			</div>
+			<div class="text-center">
+				<button type="button" id="li-btn" class="btn btn-primary" onclick="login()">Login</button>
+			</div>
+		</form>
+	</div>
+</div>
+</body>
+<script type="text/javascript">
+function login()
+{
+	let email,date;
+	email=document.getElementById("email").value;
+	date=document.getElementById("date").value;
+	
+	let user_records=new Array();
+	user_records=JSON.parse(localStorage.getItem("users"))?JSON.parse(localStorage.getItem("users")):[]
+		if(user_records.some((v)=>
+			{
+				return v.email==email && v.date==date;
+			} ) )
+			{
+			alert("LogIn Successfully");
+			let current_user=user_records.filter((v)=>{
+						return v.email==email && v.date==date;
+					} ) [0]
+			localStorage.setItem("name",current_user.name);
+			localStorage.setItem("email",current_user.email);
+			localStorage.setItem("date",current_user.date);
+			window.location.href="profile.html";
+			
+			}
+		else
+			{
+			alert("Login Failed!!!");
+			}
+		
+	}
+</script>
+</html>
