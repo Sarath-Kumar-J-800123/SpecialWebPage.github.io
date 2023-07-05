@@ -55,7 +55,7 @@ input[type=date]
 {
 	float:left;
 	width:50%;
-	color:green;
+	
 	
 	
 }
@@ -63,7 +63,7 @@ input[type=date]
 {
 	float:right;
 	width:50%;
-	color:black;
+	
 	
 	
 }
@@ -87,7 +87,7 @@ input[type=date]
 {
 	float:left;
 	width:50%;
-	color:red;
+	
 	
 	
 }
@@ -95,7 +95,7 @@ input[type=date]
 {
 	float:right;
 	width:50%;
-	color:blue;
+	
 	
 	
 }
