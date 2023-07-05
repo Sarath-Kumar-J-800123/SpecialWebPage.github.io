@@ -55,7 +55,7 @@ input[type=date]
 {
 	float:left;
 	width:50%;
-	color:white;
+	color:green;
 	
 	
 }
@@ -80,6 +80,22 @@ input[type=date]
 {
 	float:right;
 	width:50%;
+	
+	
+}
+#d5
+{
+	float:left;
+	width:50%;
+	color:red;
+	
+	
+}
+#d6
+{
+	float:right;
+	width:50%;
+	color:blue;
 	
 	
 }
